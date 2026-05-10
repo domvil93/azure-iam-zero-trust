@@ -1,0 +1,15 @@
+{
+  "Name": "Cost Viewer",
+  "Description": "Read-only access to Cost Management and billing data only. Designed for finance team budget monitoring and cost allocation reporting. Cannot access any resource configurations, infrastructure details or security settings.",
+  "Actions": [
+    "Microsoft.CostManagement/*/read",
+    "Microsoft.Billing/*/read",
+    "Microsoft.Consumption/*/read",
+    "Microsoft.Resources/subscriptions/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read"
+  ],
+  "NotActions": [],
+  "AssignableScopes": [
+    "/subscriptions/YOUR-SUBSCRIPTION-ID"
+  ]
+}
