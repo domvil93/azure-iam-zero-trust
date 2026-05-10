@@ -1,0 +1,21 @@
+{
+  "Name": "Storage Auditor",
+  "Description": "Read-only access to blob storage and storage audit logs for compliance verification. Designed for finance team compliance auditing. Cannot write, modify or delete any storage content.",
+  "Actions": [
+    "Microsoft.Storage/storageAccounts/read",
+    "Microsoft.Storage/storageAccounts/blobServices/read",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/read",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/read",
+    "Microsoft.Insights/logs/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read"
+  ],
+  "NotActions": [
+    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/delete",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/write",
+    "Microsoft.Storage/storageAccounts/blobServices/containers/delete"
+  ],
+  "AssignableScopes": [
+    "/subscriptions/YOUR-SUBSCRIPTION-ID"
+  ]
+}
